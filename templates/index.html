@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EcoAssist AI | Sustainable Living</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span>🌱</span><div><b>EcoAssist AI</b><small>Smart choices. Sustainable future.</small></div></div>
+  <span class="badge">SDG 12</span>
+</header>
+<main class="container">
+  <section class="hero">
+    <div><p class="eyebrow">AI + SUSTAINABILITY</p><h1>Make every waste decision count.</h1><p>Explore responsible disposal guidance, ask sustainability questions and track your everyday eco-actions.</p></div>
+    <div class="hero-art">♻️</div>
+  </section>
+  <section class="grid">
+    <article class="card">
+      <div class="card-title"><h2>♻️ WasteWise Classifier</h2><span class="pill">AI demo</span></div>
+      <p class="muted">Enter an item to receive a suggested category and disposal workflow.</p>
+      <div class="input-row"><input id="item" placeholder="e.g. plastic bottle, old battery"><button onclick="classifyWaste()">Analyse</button></div>
+      <div id="classification" class="result empty">Your analysis will appear here.</div>
+    </article>
+    <article class="card">
+      <div class="card-title"><h2>🤖 EcoChat</h2><span class="pill">Assistant</span></div>
+      <div id="chatlog" class="chatlog"><div class="bot">Hi! Ask me about recycling, water, energy or sustainable habits.</div></div>
+      <div class="input-row"><input id="message" placeholder="Ask a sustainability question" onkeydown="if(event.key==='Enter') chat()"><button onclick="chat()">Send</button></div>
+    </article>
+  </section>
+  <section class="card">
+    <div class="card-title"><h2>🌍 Eco-action tracker</h2><span class="pill">Personal impact</span></div>
+    <p class="muted">Select actions you completed today to estimate a simple learning score.</p>
+    <div class="actions">
+      <label><input type="checkbox" value="reused"> Reused an item</label>
+      <label><input type="checkbox" value="segregated"> Segregated waste</label>
+      <label><input type="checkbox" value="composted"> Composted food waste</label>
+      <label><input type="checkbox" value="repaired"> Repaired instead of replacing</label>
+      <label><input type="checkbox" value="avoided"> Avoided single-use plastic</label>
+    </div>
+    <button onclick="calculateImpact()">Calculate my score</button>
+    <div id="impact" class="impact"></div>
+  </section>
+  <section class="card responsible">
+    <h2>🛡️ Responsible AI considerations</h2>
+    <ul><li><b>Transparency:</b> Results are educational recommendations, not guaranteed predictions.</li><li><b>Fairness:</b> The prototype avoids making judgments about people or communities.</li><li><b>Privacy:</b> No personal information is required or stored.</li><li><b>Safety:</b> Hazardous and electronic waste is directed to authorised collection points.</li><li><b>Local context:</b> Municipal waste rules take priority over this prototype.</li></ul>
+  </section>
+</main>
+<footer>EcoAssist AI • Student prototype for 1M1B AI for Sustainability • Built for SDG 12</footer>
+<script src="/static/script.js"></script>
+</body>
+</html>
